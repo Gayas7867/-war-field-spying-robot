@@ -1,0 +1,61 @@
+# War Field Spying Robot
+
+## 🌟 Project Overview
+The **War Field Spying Robot** is a mobile robot designed to capture real-time video and sensor data from enemy terrain before a mission. It allows military forces to assess threats and plan attacks more effectively.
+
+---
+
+## 🚀 Main Features
+- Small, mobile robot with a camera and sensors.
+- Remote control for maneuverability.
+- Provides real-time video feed and sensor data.
+- Enables reconnaissance of enemy areas.
+
+---
+
+## ⚡️ Technologies Used
+- **Microcontroller**: Arduino
+- **Programming Language**: C / C++
+- **Components**:
+  - Servo Motor
+  - Motor Driver
+  - Camera
+  - Motion Sensors
+- **Communication**: Wireless (RF, Bluetooth, or WiFi)
+
+---
+
+## 👇 Demo Arduino/C++ Code
+```cpp
+#include <Servo.h>
+
+Servo servoMotor;
+
+int sensorPin = A0;
+int motorLeftPin = 5;
+int motorRightPin = 6;
+
+void setup() {
+  servoMotor.attach(9);
+  pinMode(sensorPin, INPUT);
+  pinMode(motorLeftPin, OUTPUT);
+  pinMode(motorRightPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = analogRead(sensorPin);
+  Serial.println(sensorValue);
+
+  if(sensorValue > 500) {
+    digitalWrite(motorLeftPin, HIGH);
+    digitalWrite(motorRightPin, HIGH);
+    servoMotor.write(90);
+  } else {
+    digitalWrite(motorLeftPin, LOW);
+    digitalWrite(motorRightPin, LOW);
+    servoMotor.write(0);
+  }
+
+  delay(100);
+}
