@@ -1,0 +1,33 @@
+# War Field Spying Robot
+
+## Overview  
+Before a military attack, officers need to gather intelligence about enemy positions to plan their strategy safely. The War Field Spying Robot is designed to do exactly that — it is a small, lightweight robot equipped with a camera and sensors that can be sent into the war field to spy and provide real-time video and data. This helps military forces detect enemy locations before starting a mission, improving safety and effectiveness.
+
+## Features  
+- Remote control movement  
+- Small camera and motion sensors for real-time monitoring  
+- Wireless data transmission to the command center  
+
+## Technologies Used  
+- Robotics  
+- Arduino  
+- Embedded Systems  
+- C and C++ programming  
+- Camera and Motion Sensors  
+- Wireless Communication  
+
+## How It Works  
+The robot uses an Arduino microcontroller programmed in C/C++ to process data from motion sensors and the camera. It sends the live video and sensor data wirelessly to a remote command center, where military personnel can analyze the information and make informed decisions before engaging in the field.
+
+## Setup  
+1. Connect sensors and camera to the Arduino board.  
+2. Upload the Arduino program to the board using Arduino IDE.  
+3. Set up the wireless communication module for data transfer.  
+4. Control the robot remotely and monitor the live data feed.
+
+## Challenges & Learning  
+Integrated multiple sensors and ensured stable wireless communication. Developed skills in embedded systems, robotics, and real-time data transmission under challenging conditions.
+
+## Author  
+Mahammad Gayas  
+Email: mohammedgayas49@gmail.com
